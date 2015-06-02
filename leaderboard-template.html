@@ -1,0 +1,16 @@
+<template name="leaderboard">
+  <ul>
+  {{#each player}}
+  <li class="playerz {{selectedClass}}">
+    {{name}}: {{score}}
+  </li>
+  {{/each}}
+  </ul>
+<h1>Total players count is : </h1>{{count}}
+{{findPlayer 4}}
+<br>
+<button class="remove">Remove Player</button>
+<button class="increment">Score: {{findSelected.score}} Increment</button>
+<button class="decrement">Score: {{findSelected.score}} Decrement</button>
+<input type="text" class="textip" />
+</template>
